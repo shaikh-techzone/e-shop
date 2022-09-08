@@ -1,0 +1,33 @@
+.footer-bottom {
+    position: relative;
+    padding: 25px 0;
+    background: #ffffff;
+}
+
+.footer-bottom .copyright {
+    text-align: left;
+}
+
+.footer-bottom .template-by {
+    text-align: right;
+}
+
+.footer-bottom .copyright p,
+.footer-bottom .template-by p {
+    color: #666666;
+    font-weight: 400;
+    margin: 0;
+}
+
+.footer-bottom .copyright p a,
+.footer-bottom .template-by p a {
+    font-weight: 600;
+}
+
+@media (max-width: 768.98px) {
+
+    .footer-bottom .copyright,
+    .footer-bottom .template-by {
+        text-align: center;
+    }
+}
