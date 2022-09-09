@@ -7,11 +7,11 @@ import SSl from "../../img/ssl.svg";
 const FooterTop = () => {
 	return (
 		<>
-			<div class='footer'>
-				<div class='container-fluid'>
-					<div class='row'>
-						<div class='col-lg-3 col-md-6'>
-							<div class='footer-widget'>
+			<div className='footer'>
+				<div className='container-fluid'>
+					<div className='row'>
+						<div className='col-lg-3 col-md-6'>
+							<div className='footer-widget'>
 								<h1>E Shop</h1>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -23,9 +23,9 @@ const FooterTop = () => {
 							</div>
 						</div>
 
-						<div class='col-lg-3 col-md-6'>
-							<div class='footer-widget'>
-								<h3 class='title'>Useful Pages</h3>
+						<div className='col-lg-3 col-md-6'>
+							<div className='footer-widget'>
+								<h3 className='title'>Useful Pages</h3>
 								<ul>
 									<li>
 										<a href='product.html'>Product</a>
@@ -49,9 +49,9 @@ const FooterTop = () => {
 							</div>
 						</div>
 
-						<div class='col-lg-3 col-md-6'>
-							<div class='footer-widget'>
-								<h3 class='title'>Quick Links</h3>
+						<div className='col-lg-3 col-md-6'>
+							<div className='footer-widget'>
+								<h3 className='title'>Quick Links</h3>
 								<ul>
 									<li>
 										<a href='product.html'>Product</a>
@@ -75,35 +75,35 @@ const FooterTop = () => {
 							</div>
 						</div>
 
-						<div class='col-lg-3 col-md-6'>
-							<div class='footer-widget'>
-								<h3 class='title'>Get in Touch</h3>
-								<div class='contact-info'>
+						<div className='col-lg-3 col-md-6'>
+							<div className='footer-widget'>
+								<h3 className='title'>Get in Touch</h3>
+								<div className='contact-info'>
 									<p>
-										<i class='fa fa-map-marker'></i>123 E Shop, Los Angeles, CA,
-										USA
+										<i className='fa fa-map-marker'></i>123 E Shop, Los Angeles,
+										CA, USA
 									</p>
 									<p>
-										<i class='fa fa-envelope'></i>email@example.com
+										<i className='fa fa-envelope'></i>email@example.com
 									</p>
 									<p>
-										<i class='fa fa-phone'></i>+123-456-7890
+										<i className='fa fa-phone'></i>+123-456-7890
 									</p>
-									<div class='social'>
+									<div className='social'>
 										<a href=''>
-											<i class='fa fa-twitter'></i>
+											<i className='fa fa-twitter'></i>
 										</a>
 										<a href=''>
-											<i class='fa fa-facebook'></i>
+											<i className='fa fa-facebook'></i>
 										</a>
 										<a href=''>
-											<i class='fa fa-linkedin'></i>
+											<i className='fa fa-linkedin'></i>
 										</a>
 										<a href=''>
-											<i class='fa fa-instagram'></i>
+											<i className='fa fa-instagram'></i>
 										</a>
 										<a href=''>
-											<i class='fa fa-youtube'></i>
+											<i className='fa fa-youtube'></i>
 										</a>
 									</div>
 								</div>
@@ -111,15 +111,15 @@ const FooterTop = () => {
 						</div>
 					</div>
 
-					<div class='row payment'>
-						<div class='col-md-6'>
-							<div class='payment-method'>
+					<div className='row payment'>
+						<div className='col-md-6'>
+							<div className='payment-method'>
 								<p>We Accept:</p>
 								<img src={paymentMethod} alt='Payment Method' />
 							</div>
 						</div>
-						<div class='col-md-6'>
-							<div class='payment-security'>
+						<div className='col-md-6'>
+							<div className='payment-security'>
 								<p>Secured By:</p>
 								<img src={goDaddy} alt='Payment Security' />
 								<img src={Norton} alt='Payment Security' />

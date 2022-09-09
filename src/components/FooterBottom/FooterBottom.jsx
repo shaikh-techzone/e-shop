@@ -3,17 +3,17 @@ import "./FooterBottom.css";
 const FooterBottom = () => {
 	return (
 		<>
-			<div class='footer-bottom'>
-				<div class='container'>
-					<div class='row'>
-						<div class='col-md-6 copyright'>
+			<div className='footer-bottom'>
+				<div className='container'>
+					<div className='row'>
+						<div className='col-md-6 copyright'>
 							<p>
 								Copyright &copy; <a href='https://htmlcodex.com'>HTML Codex</a>.
 								All Rights Reserved
 							</p>
 						</div>
 
-						<div class='col-md-6 template-by'>
+						<div className='col-md-6 template-by'>
 							<p>
 								Template By <a href='https://htmlcodex.com'>HTML Codex</a>
 							</p>

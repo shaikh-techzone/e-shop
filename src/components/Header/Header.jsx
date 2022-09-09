@@ -5,41 +5,44 @@ import logo from "../../img/logo.png";
 const header = () => {
 	return (
 		<>
-			<div class='top-header'>
-				<div class='container'>
-					<div class='row align-items-center'>
-						<div class='col-md-3'>
-							<div class='logo'>
+			<div className='top-header'>
+				<div className='container'>
+					<div className='row align-items-center'>
+						<div className='col-md-3'>
+							<div className='logo'>
 								<a href=''>
 									<img src={logo} alt='Logo' />
 								</a>
 							</div>
 						</div>
-						<div class='col-md-6'>
-							<div class='search'>
+						<div className='col-md-6'>
+							<div className='search'>
 								<input type='text' placeholder='Search' />
 								<button>
-									<i class='fa fa-search'></i>
+									<i className='fa fa-search'></i>
 								</button>
 							</div>
 						</div>
-						<div class='col-md-3'>
-							<div class='user'>
-								<div class='dropdown'>
-									<a href='#' class='dropdown-toggle' data-toggle='dropdown'>
+						<div className='col-md-3'>
+							<div className='user'>
+								<div className='dropdown'>
+									<a
+										href='#'
+										className='dropdown-toggle'
+										data-toggle='dropdown'>
 										My Account
 									</a>
-									<div class='dropdown-menu'>
-										<a href='#' class='dropdown-item'>
+									<div className='dropdown-menu'>
+										<a href='#' className='dropdown-item'>
 											Login
 										</a>
-										<a href='#' class='dropdown-item'>
+										<a href='#' className='dropdown-item'>
 											Register
 										</a>
 									</div>
 								</div>
-								<div class='cart'>
-									<i class='fa fa-cart-plus'></i>
+								<div className='cart'>
+									<i className='fa fa-cart-plus'></i>
 									<span>(0)</span>
 								</div>
 							</div>
