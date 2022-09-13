@@ -1,46 +1,52 @@
 import React from "react";
-import "./Header.css";
+import { NavLink } from "react-router-dom";
+// import "./Header.css";
 import logo from "../../img/logo.png";
 
 const header = () => {
 	return (
 		<>
-			<div class='top-header'>
-				<div class='container'>
-					<div class='row align-items-center'>
-						<div class='col-md-3'>
-							<div class='logo'>
-								<a href=''>
+			<div className='top-header'>
+				<div className='container'>
+					<div className='row align-items-center'>
+						<div className='col-md-3'>
+							<div className='logo'>
+								<NavLink to=''>
 									<img src={logo} alt='Logo' />
-								</a>
+								</NavLink>
 							</div>
 						</div>
-						<div class='col-md-6'>
-							<div class='search'>
+						<div className='col-md-6'>
+							<div className='search'>
 								<input type='text' placeholder='Search' />
 								<button>
-									<i class='fa fa-search'></i>
+									<i className='fa fa-search'></i>
 								</button>
 							</div>
 						</div>
-						<div class='col-md-3'>
-							<div class='user'>
-								<div class='dropdown'>
-									<a href='#' class='dropdown-toggle' data-toggle='dropdown'>
+						<div className='col-md-3'>
+							<div className='user'>
+								<div className='dropdown'>
+									<NavLink
+										to='#'
+										className='dropdown-toggle'
+										data-toggle='dropdown'>
 										My Account
-									</a>
-									<div class='dropdown-menu'>
-										<a href='#' class='dropdown-item'>
+									</NavLink>
+									<div className='dropdown-menu'>
+										<NavLink to='#' className='dropdown-item'>
 											Login
-										</a>
-										<a href='#' class='dropdown-item'>
+										</NavLink>
+										<NavLink to='#' className='dropdown-item'>
 											Register
-										</a>
+										</NavLink>
 									</div>
 								</div>
-								<div class='cart'>
-									<i class='fa fa-cart-plus'></i>
-									<span>(0)</span>
+								<div className='cart'>
+									<NavLink to={"/cart"}>
+										<i className='fa fa-cart-plus'></i>
+										<span>(0)</span>
+									</NavLink>
 								</div>
 							</div>
 						</div>

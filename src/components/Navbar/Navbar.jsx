@@ -1,67 +1,68 @@
 import React from "react";
-import "./Navbar.css";
+// import "./Navbar.css";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
 	return (
 		<>
-			<div class='header'>
-				<div class='container'>
-					<nav class='navbar navbar-expand-md bg-dark navbar-dark'>
-						<a href='#' class='navbar-brand'>
+			<div className='header'>
+				<div className='container'>
+					<nav className='navbar navbar-expand-md bg-dark navbar-dark'>
+						<NavLink to={"/"} className='navbar-brand'>
 							MENU
-						</a>
+						</NavLink>
 						<button
 							type='button'
-							class='navbar-toggler'
+							className='navbar-toggler'
 							data-toggle='collapse'
 							data-target='#navbarCollapse'>
-							<span class='navbar-toggler-icon'></span>
+							<span className='navbar-toggler-icon'></span>
 						</button>
 
 						<div
-							class='collapse navbar-collapse justify-content-between'
+							className='collapse navbar-collapse justify-content-between'
 							id='navbarCollapse'>
-							<div class='navbar-nav m-auto'>
-								<a href='index.html' class='nav-item nav-link active'>
+							<div className='navbar-nav m-auto'>
+								<NavLink to='/' className='nav-item nav-link active'>
 									Home
-								</a>
-								<a href='product-list.html' class='nav-item nav-link'>
+								</NavLink>
+								<NavLink to='/products' className='nav-item nav-link'>
 									Products
-								</a>
-								<div class='nav-item dropdown'>
+								</NavLink>
+								{/* <div className='nav-item dropdown'>
 									<a
 										href='#'
-										class='nav-link dropdown-toggle'
+										className='nav-link dropdown-toggle'
 										data-toggle='dropdown'>
 										Pages
 									</a>
-									<div class='dropdown-menu'>
-										<a href='product-list.html' class='dropdown-item'>
+									<div className='dropdown-menu'>
+										<a href='product-list.html' className='dropdown-item'>
 											Product
 										</a>
-										<a href='product-detail.html' class='dropdown-item'>
+										<a href='product-detail.html' className='dropdown-item'>
 											Product Detail
 										</a>
-										<a href='cart.html' class='dropdown-item'>
+										<a href='cart.html' className='dropdown-item'>
 											Cart
 										</a>
-										<a href='wishlist.html' class='dropdown-item'>
+										<a href='wishlist.html' className='dropdown-item'>
 											Wishlist
 										</a>
-										<a href='checkout.html' class='dropdown-item'>
+										<a href='checkout.html' className='dropdown-item'>
 											Checkout
 										</a>
-										<a href='login.html' class='dropdown-item'>
+										<a href='login.html' className='dropdown-item'>
 											Login & Register
 										</a>
-										<a href='my-account.html' class='dropdown-item'>
+										<a href='my-account.html' className='dropdown-item'>
 											My Account
 										</a>
 									</div>
-								</div>
-								<a href='contact.html' class='nav-item nav-link'>
+								</div> */}
+								<NavLink to='/contact' className='nav-item nav-link'>
 									Contact Us
-								</a>
+								</NavLink>
 							</div>
 						</div>
 					</nav>

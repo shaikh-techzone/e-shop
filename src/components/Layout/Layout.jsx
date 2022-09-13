@@ -1,9 +1,9 @@
 import React from "react";
-import Contact from "../Contact/Contact";
 import FooterBottom from "../FooterBottom/FooterBottom";
 import FooterTop from "../FooterTop/FooterTop";
 import Header from "../Header/Header";
 import Navbar from "../Navbar/Navbar";
+// import "../../App.css";
 
 const Layout = ({ children }) => {
 	return (
@@ -17,7 +17,6 @@ const Layout = ({ children }) => {
 				<FooterTop />
 				<FooterBottom />
 			</div>
-			
 		</>
 	);
 };
