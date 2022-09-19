@@ -4,13 +4,13 @@ import CartItem from "./CartItem";
 const Cart = () => {
 	return (
 		<>
-			<div class='cart-page'>
-				<div class='container'>
-					<div class='row'>
-						<div class='col-md-12'>
-							<div class='table-responsive'>
-								<table class='table table-bordered'>
-									<thead class='thead-dark'>
+			<div className='cart-page'>
+				<div className='container'>
+					<div className='row'>
+						<div className='col-md-12'>
+							<div className='table-responsive'>
+								<table className='table table-bordered'>
+									<thead className='thead-dark'>
 										<tr>
 											<th>Image</th>
 											<th>Name</th>
@@ -20,7 +20,7 @@ const Cart = () => {
 											<th>Remove</th>
 										</tr>
 									</thead>
-									<tbody class='align-middle'>
+									<tbody className='align-middle'>
 										<CartItem />
 										{/* <tr>
 											<td>
@@ -33,20 +33,20 @@ const Cart = () => {
 											</td>
 											<td>$22</td>
 											<td>
-												<div class='qty'>
-													<button class='btn-minus'>
-														<i class='fa fa-minus'></i>
+												<div className='qty'>
+													<button className='btn-minus'>
+														<i className='fa fa-minus'></i>
 													</button>
 													<input type='text' value='1' />
-													<button class='btn-plus'>
-														<i class='fa fa-plus'></i>
+													<button className='btn-plus'>
+														<i className='fa fa-plus'></i>
 													</button>
 												</div>
 											</td>
 											<td>$22</td>
 											<td>
 												<button>
-													<i class='fa fa-trash'></i>
+													<i className='fa fa-trash'></i>
 												</button>
 											</td>
 										</tr>
@@ -61,20 +61,20 @@ const Cart = () => {
 											</td>
 											<td>$22</td>
 											<td>
-												<div class='qty'>
-													<button class='btn-minus'>
-														<i class='fa fa-minus'></i>
+												<div className='qty'>
+													<button className='btn-minus'>
+														<i className='fa fa-minus'></i>
 													</button>
 													<input type='text' value='1' />
-													<button class='btn-plus'>
-														<i class='fa fa-plus'></i>
+													<button className='btn-plus'>
+														<i className='fa fa-plus'></i>
 													</button>
 												</div>
 											</td>
 											<td>$22</td>
 											<td>
 												<button>
-													<i class='fa fa-trash'></i>
+													<i className='fa fa-trash'></i>
 												</button>
 											</td>
 										</tr>
@@ -89,20 +89,20 @@ const Cart = () => {
 											</td>
 											<td>$22</td>
 											<td>
-												<div class='qty'>
-													<button class='btn-minus'>
-														<i class='fa fa-minus'></i>
+												<div className='qty'>
+													<button className='btn-minus'>
+														<i className='fa fa-minus'></i>
 													</button>
 													<input type='text' value='1' />
-													<button class='btn-plus'>
-														<i class='fa fa-plus'></i>
+													<button className='btn-plus'>
+														<i className='fa fa-plus'></i>
 													</button>
 												</div>
 											</td>
 											<td>$22</td>
 											<td>
 												<button>
-													<i class='fa fa-trash'></i>
+													<i className='fa fa-trash'></i>
 												</button>
 											</td>
 										</tr> */}
@@ -111,16 +111,16 @@ const Cart = () => {
 							</div>
 						</div>
 					</div>
-					<div class='row'>
-						{/* <div class='col-md-6'>
-							<div class='coupon'>
+					<div className='row'>
+						{/* <div className='col-md-6'>
+							<div className='coupon'>
 								<input type='text' placeholder='Coupon Code' />
 								<button>Apply Code</button>
 							</div>
 						</div> */}
-						<div class='col-md-12'>
-							<div class='cart-summary'>
-								<div class='cart-content'>
+						<div className='col-md-12'>
+							<div className='cart-summary'>
+								<div className='cart-content'>
 									<h3>Cart Summary</h3>
 									<p>
 										Sub Total<span>$22</span>
@@ -132,7 +132,7 @@ const Cart = () => {
 										Grand Total<span>$23</span>
 									</h4>
 								</div>
-								<div class='cart-btn'>
+								<div className='cart-btn'>
 									<button>Update Cart</button>
 									<button>Checkout</button>
 								</div>

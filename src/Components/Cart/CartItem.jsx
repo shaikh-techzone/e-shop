@@ -14,20 +14,20 @@ const CartItem = () => {
 				</td>
 				<td>$22</td>
 				<td>
-					<div class='qty'>
-						<button class='btn-minus'>
-							<i class='fa fa-minus'></i>
+					<div className='qty'>
+						<button className='btn-minus'>
+							<i className='fa fa-minus'></i>
 						</button>
 						<input type='text' value='1' />
-						<button class='btn-plus'>
-							<i class='fa fa-plus'></i>
+						<button className='btn-plus'>
+							<i className='fa fa-plus'></i>
 						</button>
 					</div>
 				</td>
 				<td>$22</td>
 				<td>
 					<button>
-						<i class='fa fa-trash'></i>
+						<i className='fa fa-trash'></i>
 					</button>
 				</td>
 			</tr>

@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 // import "./Checkout.css";
 
 const Checkout = () => {
+	const [checked, setChecked] = useState(false);
+	const [radio1, setRadio1] = useState(false);
+	const [radio2, setRadio2] = useState(false);
+	const handleCheckbox = () => {
+		setChecked(!checked);
+	};
+	const handleCOD = () => {
+		setRadio1(!radio1);
+		setRadio2(false);
+	};
+	const handleDBT = () => {
+		setRadio2(!radio2);
+		setRadio1(false);
+	};
+	console.log(checked);
+	console.log(radio1);
+	console.log(radio2);
 	return (
-		<div>
+		<>
 			<div className='checkout'>
 				<div className='container'>
 					<div className='row'>
@@ -54,7 +71,7 @@ const Checkout = () => {
 									<div className='col-md-6'>
 										<label>Country</label>
 										<select className='custom-select'>
-											<option selected=''>United States</option>
+											<option selected>United States</option>
 											<option>Afghanistan</option>
 											<option>Albania</option>
 											<option>Algeria</option>
@@ -91,9 +108,7 @@ const Checkout = () => {
 												className='custom-control-input'
 												id='newaccount'
 											/>
-											<label
-												className='custom-control-label'
-												htmlFor='newaccount'>
+											<label className='custom-control-label' for='newaccount'>
 												Create an account
 											</label>
 										</div>
@@ -104,92 +119,96 @@ const Checkout = () => {
 												type='checkbox'
 												className='custom-control-input'
 												id='shipto'
+												checked={checked}
+												onChange={handleCheckbox}
 											/>
-											<label className='custom-control-label' htmlFor='shipto'>
+											<label className='custom-control-label' for='shipto'>
 												Ship to different address
 											</label>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div className='shipping-address'>
-								<h2>Shipping Address</h2>
-								<div className='row'>
-									<div className='col-md-6'>
-										<label>First Name</label>
-										<input
-											className='form-control'
-											type='text'
-											placeholder='First Name'
-										/>
-									</div>
-									<div className='col-md-6'>
-										<label>Last Name"</label>
-										<input
-											className='form-control'
-											type='text'
-											placeholder='Last Name'
-										/>
-									</div>
-									<div className='col-md-6'>
-										<label>E-mail</label>
-										<input
-											className='form-control'
-											type='text'
-											placeholder='E-mail'
-										/>
-									</div>
-									<div className='col-md-6'>
-										<label>Mobile No</label>
-										<input
-											className='form-control'
-											type='text'
-											placeholder='Mobile No'
-										/>
-									</div>
-									<div className='col-md-12'>
-										<label>Address</label>
-										<input
-											className='form-control'
-											type='text'
-											placeholder='Address'
-										/>
-									</div>
-									<div className='col-md-6'>
-										<label>Country</label>
-										<select className='custom-select'>
-											<option selected=''>United States</option>
-											<option>Afghanistan</option>
-											<option>Albania</option>
-											<option>Algeria</option>
-										</select>
-									</div>
-									<div className='col-md-6'>
-										<label>City</label>
-										<input
-											className='form-control'
-											type='text'
-											placeholder='City'
-										/>
-									</div>
-									<div className='col-md-6'>
-										<label>State</label>
-										<input
-											className='form-control'
-											type='text'
-											placeholder='State'
-										/>
-									</div>
-									<div className='col-md-6'>
-										<label>ZIP Code</label>
-										<input
-											className='form-control'
-											type='text'
-											placeholder='ZIP Code'
-										/>
+							{checked ? (
+								<div className='shipping-address'>
+									<h2>Shipping Address</h2>
+									<div className='row'>
+										<div className='col-md-6'>
+											<label>First Name</label>
+											<input
+												className='form-control'
+												type='text'
+												placeholder='First Name'
+											/>
+										</div>
+										<div className='col-md-6'>
+											<label>Last Name"</label>
+											<input
+												className='form-control'
+												type='text'
+												placeholder='Last Name'
+											/>
+										</div>
+										<div className='col-md-6'>
+											<label>E-mail</label>
+											<input
+												className='form-control'
+												type='text'
+												placeholder='E-mail'
+											/>
+										</div>
+										<div className='col-md-6'>
+											<label>Mobile No</label>
+											<input
+												className='form-control'
+												type='text'
+												placeholder='Mobile No'
+											/>
+										</div>
+										<div className='col-md-12'>
+											<label>Address</label>
+											<input
+												className='form-control'
+												type='text'
+												placeholder='Address'
+											/>
+										</div>
+										<div className='col-md-6'>
+											<label>Country</label>
+											<select className='custom-select'>
+												<option selected>United States</option>
+												<option>Afghanistan</option>
+												<option>Albania</option>
+												<option>Algeria</option>
+											</select>
+										</div>
+										<div className='col-md-6'>
+											<label>City</label>
+											<input
+												className='form-control'
+												type='text'
+												placeholder='City'
+											/>
+										</div>
+										<div className='col-md-6'>
+											<label>State</label>
+											<input
+												className='form-control'
+												type='text'
+												placeholder='State'
+											/>
+										</div>
+										<div className='col-md-6'>
+											<label>ZIP Code</label>
+											<input
+												className='form-control'
+												type='text'
+												placeholder='ZIP Code'
+											/>
+										</div>
 									</div>
 								</div>
-							</div>
+							) : null}
 						</div>
 						<div className='col-md-5'>
 							<div className='checkout-summary'>
@@ -216,10 +235,11 @@ const Checkout = () => {
 									</h4>
 								</div>
 							</div>
+
 							<div className='checkout-payment'>
 								<h2>Payment Methods</h2>
 								<div className='payment-methods'>
-									<div className='payment-method'>
+									{/* <div className='payment-method'>
 										<div className='custom-control custom-radio'>
 											<input
 												type='radio'
@@ -227,9 +247,7 @@ const Checkout = () => {
 												id='payment-1'
 												name='payment'
 											/>
-											<label
-												className='custom-control-label'
-												htmlFor='payment-1'>
+											<label className='custom-control-label' for='payment-1'>
 												Paypal
 											</label>
 										</div>
@@ -249,9 +267,7 @@ const Checkout = () => {
 												id='payment-2'
 												name='payment'
 											/>
-											<label
-												className='custom-control-label'
-												htmlFor='payment-2'>
+											<label className='custom-control-label' for='payment-2'>
 												Payoneer
 											</label>
 										</div>
@@ -271,9 +287,7 @@ const Checkout = () => {
 												id='payment-3'
 												name='payment'
 											/>
-											<label
-												className='custom-control-label'
-												htmlFor='payment-3'>
+											<label className='custom-control-label' for='payment-3'>
 												Check Payment
 											</label>
 										</div>
@@ -284,7 +298,7 @@ const Checkout = () => {
 												quis diam.
 											</p>
 										</div>
-									</div>
+									</div> */}
 									<div className='payment-method'>
 										<div className='custom-control custom-radio'>
 											<input
@@ -292,20 +306,22 @@ const Checkout = () => {
 												className='custom-control-input'
 												id='payment-4'
 												name='payment'
+												checked={radio2}
+												onChange={handleDBT}
 											/>
-											<label
-												className='custom-control-label'
-												htmlFor='payment-4'>
+											<label className='custom-control-label' for='payment-4'>
 												Direct Bank Transfer
 											</label>
 										</div>
-										<div className='payment-content' id='payment-4-show'>
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-												Cras tincidunt orci ac eros volutpat maximus lacinia
-												quis diam.
-											</p>
-										</div>
+										{radio2 ? (
+											<div className='payment-content' id='payment-5-show'>
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipiscing
+													elit. Cras tincidunt orci ac eros volutpat maximus
+													lacinia quis diam.
+												</p>
+											</div>
+										) : null}
 									</div>
 									<div className='payment-method'>
 										<div className='custom-control custom-radio'>
@@ -314,20 +330,22 @@ const Checkout = () => {
 												className='custom-control-input'
 												id='payment-5'
 												name='payment'
+												checked={radio1}
+												onChange={handleCOD}
 											/>
-											<label
-												className='custom-control-label'
-												htmlFor='payment-5'>
+											<label className='custom-control-label' for='payment-5'>
 												Cash on Delivery
 											</label>
 										</div>
-										<div className='payment-content' id='payment-5-show'>
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-												Cras tincidunt orci ac eros volutpat maximus lacinia
-												quis diam.
-											</p>
-										</div>
+										{radio1 ? (
+											<div className='payment-content' id='payment-5-show'>
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipiscing
+													elit. Cras tincidunt orci ac eros volutpat maximus
+													lacinia quis diam.
+												</p>
+											</div>
+										) : null}
 									</div>
 								</div>
 								<div className='checkout-btn'>
@@ -338,7 +356,7 @@ const Checkout = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 
