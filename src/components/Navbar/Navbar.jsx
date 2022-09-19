@@ -23,7 +23,7 @@ const Navbar = () => {
 							className='collapse navbar-collapse justify-content-between'
 							id='navbarCollapse'>
 							<div className='navbar-nav m-auto'>
-								<NavLink to='/' className='nav-item nav-link active'>
+								<NavLink to='/' className='nav-item nav-link '>
 									Home
 								</NavLink>
 								<NavLink to='/products' className='nav-item nav-link'>

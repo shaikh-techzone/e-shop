@@ -1,12 +1,12 @@
 import React from "react";
-import Details from "../components/ProdDetails/Details";
+import Details from "../Components/ProdDetails/Details";
 
 const ProductDetails = () => {
-  return (
-    <>
-      <Details />
-    </>
-  );
+	return (
+		<>
+			<Details />
+		</>
+	);
 };
 
 export default ProductDetails;

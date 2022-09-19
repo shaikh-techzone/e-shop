@@ -1,20 +1,20 @@
 import React from "react";
-import Category from "../components/Category/Category";
-import Feature from "../components/Feature/Feature";
-import Slider from "../components/Slider/Slider";
-import RecentProd from "../components/RecentProduct/RecentProd";
-import Brands from "../components/Brands/Brands";
+import Category from "../Components/Category/Category";
+import Feature from "../Components/Feature/Feature";
+import Slider from "../Components/Slider/Slider";
+import RecentProd from "../Components/RecentProduct/RecentProd";
+import Brands from "../Components/Brands/Brands";
 
 const Home = () => {
-  return (
-    <>
-      <Slider />
-      <Feature />
-      <Category />
-      <RecentProd />
-      <Brands />
-    </>
-  );
+	return (
+		<>
+			<Slider />
+			<Feature />
+			<Category />
+			<RecentProd />
+			<Brands />
+		</>
+	);
 };
 
 export default Home;

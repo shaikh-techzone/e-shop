@@ -6,6 +6,8 @@ import ContactPage from './Pages/ContactPage';
 import WishlistPage from './Pages/WishlistPage';
 import CartPage from './Pages/CartPage';
 import HomePage from './Pages/HomePage';
+import Home from "./Pages/Home"
+import Product from './Pages/Product';
 
 function App() {
   return (
@@ -13,7 +15,8 @@ function App() {
       <Router>
         <Layout>
           <Routes>
-            <Route path='/' element={<HomePage />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/products' element={<Product />} />
             <Route path='/checkout' element={<CheckoutPage />} />
             <Route path='/contact' element={<ContactPage />} />
             <Route path='/wishlist' element={<WishlistPage />} />
