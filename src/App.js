@@ -5,7 +5,6 @@ import CheckoutPage from './Pages/CheckoutPage';
 import ContactPage from './Pages/ContactPage';
 import WishlistPage from './Pages/WishlistPage';
 import CartPage from './Pages/CartPage';
-import HomePage from './Pages/HomePage';
 import Home from "./Pages/Home"
 import Product from './Pages/Product';
 
