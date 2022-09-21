@@ -1,5 +1,5 @@
 import React from "react";
-import "./FooterTop.css";
+// import "./FooterTop.css";
 import paymentMethod from "../../img/payment-method.png";
 import goDaddy from "../../img/godaddy.svg";
 import Norton from "../../img/norton.svg";

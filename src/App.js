@@ -1,13 +1,30 @@
-// import logo from './logo.svg';
 import './App.css';
-import Layout from './Components/Layout/Layout'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './Components/Layout/Layout';
+import CheckoutPage from './Pages/CheckoutPage';
+import ContactPage from './Pages/ContactPage';
+import WishlistPage from './Pages/WishlistPage';
+import CartPage from './Pages/CartPage';
+import HomePage from './Pages/HomePage';
+import Home from "./Pages/Home"
+import Product from './Pages/Product';
 
 function App() {
   return (
     <>
-      <Layout>
-        <h1>Hello World</h1>
-      </Layout>
+      <Router>
+        <Layout>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/products' element={<Product />} />
+            <Route path='/checkout' element={<CheckoutPage />} />
+            <Route path='/contact' element={<ContactPage />} />
+            <Route path='/wishlist' element={<WishlistPage />} />
+            <Route path='/cart' element={<CartPage />} />
+          </Routes>
+        </Layout>
+      </Router>
+
     </>
   );
 }

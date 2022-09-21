@@ -1,5 +1,6 @@
 import React from "react";
-import "./Navbar.css";
+// import "./Navbar.css";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
 	return (
@@ -7,9 +8,9 @@ const Navbar = () => {
 			<div className='header'>
 				<div className='container'>
 					<nav className='navbar navbar-expand-md bg-dark navbar-dark'>
-						<a href='#' className='navbar-brand'>
+						<NavLink to={"/"} className='navbar-brand'>
 							MENU
-						</a>
+						</NavLink>
 						<button
 							type='button'
 							className='navbar-toggler'
@@ -22,13 +23,13 @@ const Navbar = () => {
 							className='collapse navbar-collapse justify-content-between'
 							id='navbarCollapse'>
 							<div className='navbar-nav m-auto'>
-								<a href='index.html' className='nav-item nav-link active'>
+								<NavLink to='/' className='nav-item nav-link '>
 									Home
-								</a>
-								<a href='product-list.html' className='nav-item nav-link'>
+								</NavLink>
+								<NavLink to='/products' className='nav-item nav-link'>
 									Products
-								</a>
-								<div className='nav-item dropdown'>
+								</NavLink>
+								{/* <div className='nav-item dropdown'>
 									<a
 										href='#'
 										className='nav-link dropdown-toggle'
@@ -58,10 +59,10 @@ const Navbar = () => {
 											My Account
 										</a>
 									</div>
-								</div>
-								<a href='contact.html' className='nav-item nav-link'>
+								</div> */}
+								<NavLink to='/contact' className='nav-item nav-link'>
 									Contact Us
-								</a>
+								</NavLink>
 							</div>
 						</div>
 					</nav>
